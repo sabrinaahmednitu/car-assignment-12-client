@@ -1,0 +1,91 @@
+[
+    {   
+     
+      "CarsName": "Lamborghini",
+      "key": "1",
+      "price":10797,
+      "img": "https://image.freepik.com/free-photo/chrome-black-sport-car-parking-with-front-lights_114579-4020.jpg",
+      "description":" Automobili Lamborghini S.p.A. is an Italian brand and manufacturer of luxury sports cars and SUVs based in Sant'Agata Bolognese. The company is owned by the Volkswagen Group through its subsidiary Audi. "
+    },
+    {   
+       
+        "CarsName": "Lamborghini SVJ Roadster ",
+        "price":5650,
+        "key": "2",
+        "img": "https://image.freepik.com/free-photo/blue-sport-car_2227-1.jpg",
+        "description":"The company is owned by the Volkswagen Group through its subsidiary Audi.Automobili Lamborghini S.p.A. is an Italian brand and manufacturer of luxury sports cars and SUVs based in Sant'Agata Bolognese. "
+    },
+    {   
+       
+        "CarsName": "Audi",
+        "price":7030,
+        "key": "3",
+        "img": "https://image.freepik.com/free-photo/beautiful-car_181624-36788.jpg",
+        "description":" Audi AG is a German automotive manufacturer of luxury vehicles headquartered in Ingolstadt, Bavaria, Germany. As a subsidiary of its parent company, the Volkswagen Group, Audi produces vehicles in nine production facilities worldwide. "
+    },
+    {
+       
+        "CarsName": "Lamborghini Huracan",
+        "price":10590,
+        "key": "4",
+        "img": "https://images.unsplash.com/photo-1516515429572-bf32372f2409?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80",
+        "description":"Raceism is a car stance event hosted every year in Wroclaw, Poland. Hundreds of modified cars from Europe come here to please crowds with its’ looks and highly modified bodyworks. Here is an example of matte black Lamborghini Huracan."
+    },
+    {
+       
+        "CarsName": "Tata Motors",
+        "price":9670,
+        "key": "5",
+        "img": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+        "description":"Tata Group, is an Indian multinational conglomerate company, manufacturer of automobiles, airplanes and other products, headquartered in the city of Mumbai, India.the company gained international several global companies."
+    },
+    {
+       
+        "CarsName": " Suzuki cars ",
+        "price":7480,
+        "key": "6",
+        "img": "https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1425&q=80",
+        "description":"Suzuki Motor Corporation is a Japanese multinational  Hamamatsu, Japan. Suzuki manufactures automobiles,  all-terrain vehicles, wheelchairs and a variety of other small internal combustion engines. "
+    },
+    {
+       
+        "CarsName": "Mercedes-Benz",
+        "price":9565,
+        "key": "7",
+        "img": "https://images.unsplash.com/photo-1617788138017-80ad40651399?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "description":"Mercedes-Benz, commonly referred to as Mercedes, is a German luxury automotive marque. Mercedes-Benz and in Stuttgart, Baden-Württemberg, Germany. Mercedes-Benz produces consumer luxury vehicles and commercial vehicles"
+    },
+    {
+       
+        "CarsName": "Nissan Fairlady Z",
+        "price":6745,
+        "key": "9",
+        "img": "https://images.unsplash.com/photo-1592365559101-19adfefdf294?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+        "description":"Welcome to Nissan's virtual (online) museum, that contains hundreds of heritage vehicles stored at Zama Heritage Car Garage in Japanearn learn about the evolution of the Nissan Z-Car from the Fairlady Z, 240Z, 300Z, 350Z to the all new "
+    },
+    {
+       
+        "CarsName": "BMW car",
+        "price":54364,
+        "key": "10",
+        "img": " https://images.unsplash.com/photo-1595558848762-e5ab72171957?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+        "description":"Bayerische Motoren Werke AG, commonly referred to as BMW, is a German multinational corporate manufacturer of luxury vehicles and motorcycles headquartered in Munich, Bavaria, Germany."
+    },
+    {
+       
+        "CarsName": "Tesla",
+        "price":36837,
+        "key": "11",
+        "img": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "description":"Tesla, Inc. is an American electric vehicle and clean energy company based in Palo Alto, California, United States. Tesla desigenergy storage from home to grid-scale, solar panels and solar roof tiles, and related products and services. "
+    },
+    {
+       
+        "CarsName": "Lexus RC 350 F-Sport ",
+        "price":5478,
+        "key": "12",
+        "img":"https://images.unsplash.com/photo-1598551292182-1df7b0c7504c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
+        "description": " always insisted that the Maruti 800 is more popular within semi-urban / rural cities than in the large metros. This statement is "
+    }
+    
+  ]
