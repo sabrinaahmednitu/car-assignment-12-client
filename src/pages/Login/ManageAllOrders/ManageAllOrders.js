@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 const ManageAllOrders = () => {
   const [allOrders, setAllOrders] = useState([]);
   const date = new Date().toLocaleDateString();
 
   useEffect(() => {
-    fetch("https://tranquil-ocean-72322.herokuapp.com/orders")
+    fetch('https://carzone-server-4ww6.onrender.com/orders')
       .then((res) => res.json())
       .then((data) => {
         setAllOrders(data);
@@ -14,16 +14,16 @@ const ManageAllOrders = () => {
 
   // Manage All Orders Delete Method
   const handleDelete = (id) => {
-    fetch(`https://tranquil-ocean-72322.herokuapp.com/deleteProduct/${id}`, {
-      method: "DELETE",
+    fetch(`https://carzone-server-4ww6.onrender.com/deleteProduct/${id}`, {
+      method: 'DELETE',
       headers: {
-        "content-type": "application/json",
+        'content-type': 'application/json',
       },
     })
       .then((res) => res.json())
       .then((data) => {
         const proceed = window.confirm(
-          "Stop! are you sure you want to delete?"
+          'Stop! are you sure you want to delete?'
         );
         if (proceed) {
           if (data.deletedCount === 1) {

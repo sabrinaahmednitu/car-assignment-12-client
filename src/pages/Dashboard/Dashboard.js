@@ -1,23 +1,23 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import MailIcon from "@mui/icons-material/Mail";
-import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import { Button, Grid } from "@mui/material";
-import MyOrders from "../Login/MyOrders/MyOrders";
-import { Link } from "react-router-dom";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import MailIcon from '@mui/icons-material/Mail';
+import MenuIcon from '@mui/icons-material/Menu';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import { Button, Grid } from '@mui/material';
+import MyOrders from '../Login/MyOrders/MyOrders';
+import { Link } from 'react-router-dom';
 
 import {
   BrowserRouter as Router,
@@ -25,15 +25,15 @@ import {
   Route,
   useParams,
   useRouteMatch,
-} from "react-router-dom";
-import DashboardHome from "./DashboardHome/DashboardHome";
-import MakeAdmin from "./MakeAdmin/MakeAdmin";
-import AddProduct from "./AddProduct/AddProduct";
-import ManageAllOrders from "../Login/ManageAllOrders/ManageAllOrders";
-import useAuth from "../../Hooks/useAuth";
-import AddReview from "../Login/AddReview/AddReview";
-import Payment from "./Payment/Payment";
-import ManageProducts from "./ManageProducts/ManageProducts";
+} from 'react-router-dom';
+import DashboardHome from './DashboardHome/DashboardHome';
+import MakeAdmin from './MakeAdmin/MakeAdmin';
+import AddProduct from './AddProduct/AddProduct';
+import ManageAllOrders from '../Login/ManageAllOrders/ManageAllOrders';
+import useAuth from '../../Hooks/useAuth';
+import AddReview from '../Login/AddReview/AddReview';
+import Payment from './Payment/Payment';
+import ManageProducts from './ManageProducts/ManageProducts';
 
 const drawerWidth = 240;
 
@@ -45,12 +45,10 @@ function Dashboard(props) {
   const [isAdmin, setIsAdmin] = React.useState(false);
 
   React.useEffect(() => {
-    fetch(
-      `https://tranquil-ocean-72322.herokuapp.com/checkAdmin/${user?.email}`
-    )
+    fetch(`https://carzone-server-4ww6.onrender.com/checkAdmin/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
-        if (data[0]?.role === "admin") {
+        if (data[0]?.role === 'admin') {
           setIsAdmin(true);
         } else {
           setIsAdmin(false);
@@ -130,7 +128,7 @@ function Dashboard(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -145,7 +143,7 @@ function Dashboard(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, display: { sm: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
@@ -165,12 +163,12 @@ function Dashboard(props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, 
+            keepMounted: true,
           }}
           sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
+            display: { xs: 'block', sm: 'none' },
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
               width: drawerWidth,
             },
           }}
@@ -180,9 +178,9 @@ function Dashboard(props) {
         <Drawer
           variant="permanent"
           sx={{
-            display: { xs: "none", sm: "block" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
+            display: { xs: 'none', sm: 'block' },
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
               width: drawerWidth,
             },
           }}

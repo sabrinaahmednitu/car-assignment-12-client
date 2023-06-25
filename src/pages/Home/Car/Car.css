@@ -3,3 +3,16 @@
     background-color: rgb(232, 211, 241);
     color: white;
 } */
+
+
+.purchase-btn{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    background-color:  rgb(87, 110, 241);
+    color: white;
+    border: 0;
+    outline: 0;
+    padding:  10px 50px ;
+    border-radius: 10px ;
+}

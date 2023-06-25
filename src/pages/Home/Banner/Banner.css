@@ -1,7 +1,34 @@
 .banner {
-    background-size: 100% 100%;
     background-image: url('../../../images/banner-car3.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    height:550px;
+      background-repeat: no-repeat;
+   background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
 }
+
+.banner-text {
+    width: 50%;
+  padding-left: 20px;
+  padding-top: 8%;
+}
+
+.banner-btn{
+    display: block;
+    margin: start;
+    background-color: rgb(87, 110, 241);
+   color: white;
+   padding: 10px 15px;
+   border-radius: 5px;
+    border: none;
+    outline: none;
+   
+   
+}
+
+@media only screen and (max-width:576px){
+   .banner-text {
+    width: 60%;
+}
+}
+

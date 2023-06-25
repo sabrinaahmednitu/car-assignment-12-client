@@ -1,0 +1,23 @@
+.nav-icon{
+    color: black;
+}
+.navbar{
+  background-color: rgb(49, 49, 51);
+}
+
+.nav-login-btn{
+    background-color: rgb(87, 110, 241);
+    color: white;
+     padding: 5px 20px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+.nav-logout-btn{
+    background-color: rgb(87, 110, 241);
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+     border-radius: 20px;
+}

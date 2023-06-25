@@ -7,8 +7,10 @@ const Navigation = () => {
     const {user, logout} = useAuth();
 
     return (
-      <nav className="navbar navbar-expand-lg sticky-top bg-info text-white
- ">
+      <nav
+        className="navbar navbar-expand-lg sticky-top text-white
+ "
+      >
         <div className="container-fluid ">
           <span className="text-white fw-bolder">CarHouse</span>
           <button
@@ -20,7 +22,10 @@ const Navigation = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span
+              className="navbar-toggler-icon"
+              style={{ background: 'white', borderRadius: '5px' }}
+            ></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -74,7 +79,7 @@ const Navigation = () => {
                 <Link to="/home">
                   <button
                     onClick={logout}
-                    className="btn btn-white"
+                    className=" nav-logout-btn"
                     type="submit"
                   >
                     Log Out
@@ -82,7 +87,7 @@ const Navigation = () => {
                 </Link>
               ) : (
                 <Link to="/login">
-                  <button className="text-white bg-info border-0" type="submit">
+                  <button className=" nav-login-btn" type="submit">
                     Login
                   </button>
                 </Link>

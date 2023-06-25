@@ -1,6 +1,6 @@
-import React from "react";
-import { useForm } from "react-hook-form";
-import useAuth from "../../../Hooks/useAuth";
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import useAuth from '../../../Hooks/useAuth';
 
 const AddProduct = () => {
   const { user } = useAuth();
@@ -13,17 +13,17 @@ const AddProduct = () => {
 
   const onSubmit = (data) => {
     data.email = user?.email;
-    fetch("https://tranquil-ocean-72322.herokuapp.com/addProduct", {
-      method: "POST",
+    fetch('https://carzone-server-4ww6.onrender.com/addProduct', {
+      method: 'POST',
       headers: {
-        "content-type": "application/json",
+        'content-type': 'application/json',
       },
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
       .then((result) => {
         if (result.insertedId) {
-          alert("Product Added Successfully");
+          alert('Product Added Successfully');
         }
       });
   };
@@ -36,14 +36,14 @@ const AddProduct = () => {
           <div className="login-form">
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
-                {...register("name")}
+                {...register('name')}
                 placeholder="Product Name"
                 className="p-2 m-2 w-100"
                 required
               />
               <br />
               <input
-                {...register("description")}
+                {...register('description')}
                 placeholder="description"
                 className="p-2 m-2"
                 className="p-2 m-2 w-100"
@@ -52,7 +52,7 @@ const AddProduct = () => {
               <br />
               <input
                 type="number"
-                {...register("price")}
+                {...register('price')}
                 placeholder="Price$"
                 className="p-2 m-2"
                 className="p-2 m-2 w-100"
@@ -61,7 +61,7 @@ const AddProduct = () => {
               <br />
 
               <input
-                {...register("img", { required: true })}
+                {...register('img', { required: true })}
                 placeholder="Image url"
                 className="p-2 m-2"
                 className="p-2 m-2 w-100"

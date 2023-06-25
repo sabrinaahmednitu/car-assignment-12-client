@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import initializeFirebase from "../Firebase/firebase.init";
+import React, { useState, useEffect } from 'react';
+import initializeFirebase from '../Firebase/firebase.init';
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -9,16 +9,16 @@ import {
   onAuthStateChanged,
   updateProfile,
   signOut,
-} from "firebase/auth";
+} from 'firebase/auth';
 
 initializeFirebase();
 
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const [authError, setAuthError] = useState("");
+  const [authError, setAuthError] = useState('');
   const [admin, setAdmin] = useState(false);
-  const [token, setToken] = useState("");
+  const [token, setToken] = useState('');
 
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
@@ -28,7 +28,7 @@ const useFirebase = () => {
     setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        setAuthError("");
+        setAuthError('');
         const newUser = { email, displayName: name };
         setUser(newUser);
         // save user to the database
@@ -41,7 +41,7 @@ const useFirebase = () => {
           .then(() => {})
           .catch((error) => {});
         console.log(newUser);
-        history.replace("/");
+        history.replace('/');
       })
       .catch((error) => {
         setAuthError(error.message);
@@ -54,9 +54,9 @@ const useFirebase = () => {
     setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        const destination = location?.state?.from || "/";
+        const destination = location?.state?.from || '/';
         history.replace(destination);
-        setAuthError("");
+        setAuthError('');
       })
       .catch((error) => {
         setAuthError(error.message);
@@ -71,8 +71,8 @@ const useFirebase = () => {
       .then((result) => {
         const user = result.user;
         saveUser(user.email, user.displayName);
-        setAuthError("");
-        const destination = location?.state?.from || "/dashboard";
+        setAuthError('');
+        const destination = location?.state?.from || '/dashboard';
         history.replace(destination);
       })
       .catch((error) => {
@@ -107,10 +107,10 @@ const useFirebase = () => {
 
   const saveUser = (email, displayName) => {
     const user = { email, displayName };
-    fetch("https://tranquil-ocean-72322.herokuapp.com/users", {
-      method: "POST",
+    fetch('https://carzone-server-4ww6.onrender.com/users', {
+      method: 'POST',
       headers: {
-        "content-type": "application/json",
+        'content-type': 'application/json',
       },
       body: JSON.stringify(user),
     })

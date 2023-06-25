@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './pages/Home/Home/Home';
@@ -12,6 +12,7 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import NotFound from './pages/Home/NotFound/NotFound';
 import Contact from './pages/Home/Contact/Contact.js';
 import AboutUs from './pages/Home/AboutUs/AboutUs.js';
+import Navigation from './pages/Shared/Navigation/Navigation';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <div className="App">
       <AuthProvider>
         <Router>
+          <Navigation></Navigation>
           <Switch>
             <Route exact path="/">
               <Home />
@@ -30,7 +32,7 @@ function App() {
               <Contact />
             </Route>
             <Route path="/about">
-              <AboutUs/>
+              <AboutUs />
             </Route>
             <PrivateRoute path="/cars/:carId">
               <CarDetails />
@@ -48,7 +50,7 @@ function App() {
               <Dashboard />
             </Route>
             <Route path="*">
-              <NotFound/>
+              <NotFound />
             </Route>
           </Switch>
         </Router>

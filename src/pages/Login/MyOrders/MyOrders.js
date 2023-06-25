@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import useAuth from "../../../Hooks/useAuth";
+import React, { useEffect, useState } from 'react';
+import useAuth from '../../../Hooks/useAuth';
 
 const MyOrders = () => {
   const { user } = useAuth();
@@ -7,9 +7,7 @@ const MyOrders = () => {
   const date = new Date().toLocaleDateString();
 
   useEffect(() => {
-    fetch(
-      `https://tranquil-ocean-72322.herokuapp.com/myOrders/${user?.email}`
-    )
+    fetch(`https://carzone-server-4ww6.onrender.com/myOrders/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setMyOrders(data);
@@ -18,16 +16,16 @@ const MyOrders = () => {
 
   // ORDERED PRODUCT DELETE METHOD
   const handleDelete = (id) => {
-    fetch(`https://tranquil-ocean-72322.herokuapp.com/deleteProduct/${id}`, {
-      method: "DELETE",
+    fetch(`https://carzone-server-4ww6.onrender.com/deleteProduct/${id}`, {
+      method: 'DELETE',
       headers: {
-        "content-type": "application/json",
+        'content-type': 'application/json',
       },
     })
       .then((res) => res.json())
       .then((data) => {
         const proceed = window.confirm(
-          "Stop! are you sure you want to delete?"
+          'Stop! are you sure you want to delete?'
         );
         if (proceed) {
           if (data.deletedCount === 1) {
@@ -42,31 +40,50 @@ const MyOrders = () => {
 
   return (
     <div className="container">
-      <h2 className="text-info fw-bold" >My Orders</h2>
+      <h2 className="text-info fw-bold">My Orders</h2>
       <table className="table">
         <thead>
           <tr>
-            <th className="text-info " scope="col">User Address</th>
-            <th className="text-info " scope="col">Email</th>
-            <th  className="text-info " scope="col">Item Name</th>
-            <th  className="text-info " scope="col">Item Name</th>
-            <th    className="text-info " scope="col">Price</th>
-            <th  className="text-info " scope="col">Date</th>
-            <th   className="text-info "  scope="col">Status</th>
+            <th className="text-info " scope="col">
+              User Address
+            </th>
+            <th className="text-info " scope="col">
+              Email
+            </th>
+            <th className="text-info " scope="col">
+              Item Name
+            </th>
+            <th className="text-info " scope="col">
+              Item Name
+            </th>
+            <th className="text-info " scope="col">
+              Price
+            </th>
+            <th className="text-info " scope="col">
+              Date
+            </th>
+            <th className="text-info " scope="col">
+              Status
+            </th>
           </tr>
         </thead>
         <tbody>
           {myOrders.map((order) => (
-            <tr >
-              <td className="text-danger " >{order?.address}</td>
-              <td  className="text-danger" >{order?.email}</td>
-              <td  className="text-danger" >{order?.productName}</td>
-              <td  className="text-danger" >${order.price}</td>
-              <td  className="text-danger" >${order.price}</td>
-              <td   className="text-danger" >{date}</td>
+            <tr>
+              <td className="text-danger ">{order?.address}</td>
+              <td className="text-danger">{order?.email}</td>
+              <td className="text-danger">{order?.productName}</td>
+              <td className="text-danger">${order.price}</td>
+              <td className="text-danger">${order.price}</td>
+              <td className="text-danger">{date}</td>
               <td>
-                <button  className="btn btn-warning m-2" onClick={() => handleDelete(order._id)}>Delete</button>
-                <button className="btn btn-primary m-2" >Approve</button>
+                <button
+                  className="btn btn-warning m-2"
+                  onClick={() => handleDelete(order._id)}
+                >
+                  Delete
+                </button>
+                <button className="btn btn-primary m-2">Approve</button>
               </td>
             </tr>
           ))}

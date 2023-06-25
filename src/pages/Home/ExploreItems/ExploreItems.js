@@ -1,12 +1,12 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import ExploreItem from "../ExploreItem/ExploreItem";
+import React from 'react';
+import { useState, useEffect } from 'react';
+import ExploreItem from '../ExploreItem/ExploreItem';
 
 const ExploreItems = () => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    fetch("https://tranquil-ocean-72322.herokuapp.com/cars")
+    fetch('https://carzone-server-4ww6.onrender.com/cars')
       .then((res) => res.json())
       .then((data) => {
         setCars(data);
