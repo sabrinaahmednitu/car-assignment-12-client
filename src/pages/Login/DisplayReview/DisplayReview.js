@@ -33,7 +33,7 @@ const DisplayReview = () => {
           ))}
         </div>
       )}
-      {/* <h2 className="fw-bold text-info mb-5">Car-House Best Collection</h2> */}
+      <h2 className="fw-bold text-info mb-5">Car-House Best Collection</h2>
     </div>
   );
 };

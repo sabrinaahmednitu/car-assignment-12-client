@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import ExploreItem from '../ExploreItem/ExploreItem';
+import './ExploreItems.css'
 
 const ExploreItems = () => {
   const [cars, setCars] = useState([]);
@@ -21,7 +22,7 @@ const ExploreItems = () => {
           <span className="visually-hidden">Loading...</span>
         </div>
       ) : (
-        <div className="row pb-5">
+        <div className="all-cars-container pb-5">
           {cars?.map((car, index) => (
             <ExploreItem car={car} key={index}></ExploreItem>
           ))}
