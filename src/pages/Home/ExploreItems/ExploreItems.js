@@ -16,7 +16,8 @@ const ExploreItems = () => {
 
   return (
     <div className="mt-5">
-      <h1 className="fw-bolder text-info">All Cars</h1>
+      <h1 className="fw-bolder text-info"> Explore Our Cars</h1>
+      <p>These cars are absolutely amazing with their brand new edition </p>
       {!cars?.length ? (
         <div className="spinner-border text-info" role="status">
           <span className="visually-hidden">Loading...</span>

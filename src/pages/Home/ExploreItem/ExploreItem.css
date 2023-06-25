@@ -1,0 +1,10 @@
+.buy-btn{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    color: white;
+    border: 0;
+    outline: 0;
+    padding:  10px 60px ;
+    border-radius: 5px ;
+}
